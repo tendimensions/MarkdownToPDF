@@ -1,0 +1,45 @@
+# MarkdownToPDF Project
+
+## Project Overview
+
+This is a Python utility for converting Markdown files to PDF format with table support and custom styling.
+
+## Environment Setup
+
+- **Python Environment**: Uses a local `.venv` virtual environment
+- **Python Version**: 3.13.7
+- **Key Dependencies**:
+  - `markdown2`: Markdown to HTML conversion with table support
+  - `xhtml2pdf`: HTML to PDF conversion
+
+## Running the Script
+
+Always use the virtual environment Python executable:
+
+```powershell
+.\.venv\Scripts\python.exe convert_to_pdf.py
+```
+
+## Code Guidelines
+
+1. **Encoding**: Always use UTF-8 encoding when reading/writing files
+2. **PDF Styling**: The script includes custom CSS for:
+   - Landscape letter size pages
+   - Table styling with borders and alternating row colors
+   - Green header backgrounds
+   - 8px font size for tables
+3. **Markdown Features**: Use `extras=['tables']` when converting markdown to support table syntax
+
+## File Structure
+
+- `convert_to_pdf.py`: Main conversion script
+- `table.md`: Sample markdown file with tables
+- `.venv/`: Python virtual environment (do not commit)
+- Generated output: `table.pdf`
+
+## When Making Changes
+
+- Test with the existing `table.md` file
+- Verify PDF output maintains proper table formatting
+- Ensure the virtual environment is activated before installing new packages
+- Use `install_python_packages` tool to add new dependencies
