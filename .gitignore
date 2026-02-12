@@ -1,4 +1,7 @@
 *.pdf
+*.docx
+*.xlsx
+*.pptx
 .venv/
 __pycache__/
 *.pyc
